@@ -1,0 +1,23 @@
+Arquivo logout.php:
+
+alterei a linha 11 tinham dois "" e dois '', removi os '' e a página não apresentou erro, voltou a ser funcionar
+
+também removi o ?> do fechamento do php, ele só é necessário caso contenha outra linguagem, quando é apenas php no código não precisamos fechar
+
+a linha 9 foi adicionado o path , '/', isso garante que os cookies sejam acessíveis em todas as páginas do site
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+Arquivo login.php:
+
+
+linha 19 também foi adicionado o path, '/' 
+
+Para resolver o problema de sanitização de entrada (evitar injeção de scripts (XSS), foi adicionado nas linhas 10 e 11 o trim para remover espaçoes em branco indesejados e o htmlspecialchars que converte caracteres especiais em html, para entidades html, prevenindo injeções de código e ataques XSS
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+Arquivo dashboard.php:
+
